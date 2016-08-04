@@ -24,6 +24,8 @@ var waveAnimationEnabled = false;
 var defaultHeight = '200px';
 var maxHeight = '560px';
 
+var bigZIndex = '10000000000';
+
 
 function run(callback){
 
@@ -173,7 +175,8 @@ function createTimeline(){
 
 function fullSize(){
 	setStyle(parentFrameNode, {
-		height: maxHeight
+		height: maxHeight,
+		zIndex: bigZIndex
 	});
 	setStyle(frameElement, {
 		height: maxHeight
@@ -182,7 +185,8 @@ function fullSize(){
 
 function defaultSize(){
 	setStyle(parentFrameNode, {
-		height: defaultHeight
+		height: defaultHeight,
+		zIndex: '',
 	});
 	setStyle(frameElement, {
 		height: defaultHeight
@@ -251,7 +255,6 @@ function iframePosition(){
 		width: '100%',
 		height: defaultHeight,
 		oveflow: 'hidden',
-		zIndex: 10000000000,
 	});
 
 	setStyle(frameElement, {
