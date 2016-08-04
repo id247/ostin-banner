@@ -21,7 +21,8 @@ var wave;
 
 var waveAnimationEnabled = false;
 
-var height = '560px';
+var defaultHeight = '200px';
+var maxHeight = '560px';
 
 
 function run(callback){
@@ -172,19 +173,19 @@ function createTimeline(){
 
 function fullSize(){
 	setStyle(parentFrameNode, {
-		height: height
+		height: maxHeight
 	});
 	setStyle(frameElement, {
-		height: height
+		height: maxHeight
 	});		
 }
 
 function defaultSize(){
 	setStyle(parentFrameNode, {
-		height: ''
+		height: defaultHeight
 	});
 	setStyle(frameElement, {
-		height: ''
+		height: defaultHeight
 	});			
 }
 
@@ -240,7 +241,7 @@ function iframePosition(){
 	parentFrameNode = frameElement.parentNode;
 
 	paddingDiv = parentDoc.createElement('div');
-	paddingDiv.style.height = '200px';
+	paddingDiv.style.height = defaultHeight;
 
 	setStyle(parentFrameNode, {
 		position: 'absolute',
@@ -248,12 +249,14 @@ function iframePosition(){
 		left: 0,
 		right: 0,
 		width: '100%',
+		height: defaultHeight,
 		oveflow: 'hidden',
 		zIndex: 10000000000,
 	});
 
 	setStyle(frameElement, {
-		width: '100%'
+		width: '100%',		
+		height: defaultHeight,
 	});
 
 	parentFrameNode.parentNode.insertBefore(paddingDiv, parentFrameNode.parentNode.firstChild);

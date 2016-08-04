@@ -80,6 +80,12 @@ body{
 
 
 .repeat{
+	position: absolute;
+	top: 20px;
+	right: 50%;
+	margin-right: -465px;	
+	opacity: 0;
+	z-index: 150;
 	text-indent: -9999px;
 	display: block;
 	border: 0;
@@ -93,11 +99,10 @@ body{
 		top: 2px;
 		right: 2px;
 		@include sprite($arrow);
+		transition: all .5s;
+		transform: rotate(0deg);
 	}
 	&:hover:after{
-		-webkit-transition: all .5s;
-		-o-transition: all .5s;
-		transition: all .5s;
 		transform: rotate(-359deg);
 	}
 }
@@ -344,5 +349,21 @@ body{
 		}
 
 	}
+}
+
+/* ==========================================================================
+ * link
+ * ========================================================================== */
+
+
+.link{
+	width: 970px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 100;
 }
 
