@@ -204,15 +204,9 @@ function setStyle(el, styles){
 
 function createWave(){
 	var parentDoc = window.parent ? window.parent.document : document;
-	var url;
+	var url = 'https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970/boy/mahal.png';
 
 	wave = parentDoc.createElement('div');
-
-	if (process.env.NODE_ENV !== 'production'){
-		url = 'assets/boy/mahal.png';
-	}else{
-		url = 'https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970/boy/mahal.png';
-	}
 
 	console.log(url);
 
