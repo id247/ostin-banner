@@ -6,6 +6,7 @@ var $ = require('gulp-load-plugins')(); //lazy load some of gulp plugins
 var fs = require('fs');
 var watch = require('gulp-watch');
 var spritesmith = require('gulp.spritesmith');
+var posthtml = require('gulp-posthtml');
 
 var devMode = process.env.NODE_ENV || 'development';
 
@@ -97,6 +98,71 @@ gulp.task('html', function(){
 
 });
 
+//set new images,css and js hash versions
+gulp.task('vers', function(){	
+
+	$.revHash = require('rev-hash');
+
+	const plugins = [
+		function relativeLinks(tree) {
+			tree.match({ tag: 'a' }, function (node) {
+				const href = node.attrs && node.attrs['href'] ? node.attrs['href'] : false;
+				
+				//if no href or it is external
+				if (!href || href.indexOf('http') === 0){
+					return node;
+				}
+
+				if (href.indexOf('.html') === href.length - 5){
+					node.attrs['href'] =  href.replace('.html', '');
+				}else if (href.indexOf('assets/') === 0){
+					node.attrs['href'] =  href.replace('assets/', CDN);
+				}				
+
+				return node;
+			})
+		},
+		function imgVers(tree) {
+			tree.match({ tag: 'img' }, function (node) {
+				return setVestion(node, 'src');
+			})
+		},
+		function cssVers(tree) {
+			tree.match({ tag: 'link' }, function (node) {
+				return setVestion(node, 'href');
+			})
+		},
+		function jsVers(tree) {
+			tree.match({ tag: 'script' }, function (node) {
+				return setVestion(node, 'src');
+			})
+		},
+	];
+
+	function getVersion(file){
+		return fs.existsSync(destFolder + '/' + file) && $.revHash(fs.readFileSync(destFolder + '/' +  file));
+	}
+
+	function setVestion(node, attrName){
+		const attr = node.attrs && node.attrs[attrName] ? node.attrs[attrName] : false;
+		
+		if (!attr || attr.indexOf('assets') !== 0){
+			return node;
+		}
+
+		const version =  getVersion(attr.replace('', ''));
+
+		node.attrs[attrName]=  attr.replace('assets/', CDN) + '?_v=' + version;
+		return node;
+	}
+
+	return gulp.src([destFolder + '/*.html'])
+		.pipe(posthtml(plugins))
+		.on('error', $.notify.onError())
+		.pipe(gulp.dest(destFolder));
+
+});
+
 gulp.task('webpack', function(callback) {
 	$.webpack = require('webpack');
 	$.webpackConfig = require('./webpack.config.js');
@@ -138,7 +204,7 @@ gulp.task('clean', function(callback) {
 	return $.del([destFolder]);
 });
 
-gulp.task('build', gulp.series('webpack', 'assets', 'sass', 'html'));
+gulp.task('build', gulp.series('webpack', 'assets', 'sass', 'html', 'vers'));
 
 
 //PUBLIC TASKS

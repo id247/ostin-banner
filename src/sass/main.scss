@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html,
+body{
+	overflow: hidden;
+}
+
 /* ==========================================================================
  * banner
  * ========================================================================== */
@@ -114,7 +119,7 @@
 
 	&__text{
 		display: block;
-		margin: 0 auto 12px;
+		margin: 0 auto 7px;
 	}
 
 	&__button{
@@ -137,13 +142,9 @@
 	right: 0;
 	min-width: 970px;
 	overflow: hidden;
-	height: 900px;
 
 	&__forest{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
+		position: relative;
 		z-index: 50;
 	}
 }
@@ -154,13 +155,14 @@
 
 
 .forest{
+	height: 560px;
+	overflow: hidden;
 
 	&__table{
 		position: absolute;
 		left: 50%;
-		top: 40px;
-		margin-left: 148px;
-		transform: scale(.51);
+		top: 91px;
+		margin-left: 206px;
 		display: none;
 
 		&--visible{
@@ -174,7 +176,7 @@
 		left: 50%;
 		margin-left: -2800px;
 		transform-origin: 50% 0%;
-		/*opacity: .3;*/
+		//opacity: .3;
 		display: none;
 
 		&--visible{
@@ -182,173 +184,165 @@
 		}
 
 		&--b1{
-			top: 51px;
-			margin-left: 147px;
-			transform: scale(.51);
+			top: 50px;
+			margin-left: 206px;
 		}
 
 		&--b2{
-			top: 37px;
-			margin-left: 147px;
-			transform: scale(.51);
+			top: 38px;
+			margin-left: 206px;
 		}
 
 		&--b3{
-			top: 25px;
-			margin-left: 147px;
-			transform: scale(.51);
+			top: 24px;
+			margin-left: 206px;
 		}
 
 		&--b4{
 			top: 21px;
-			margin-left: 147px;
-			transform: scale(.51);
+			margin-left: 206px;
 		}
 
 		&--b5{
 			top: 22px;
-			margin-left: 123px;
-			transform: scale(.51);
+			margin-left: 189px;
 		}
 
 		&--b6{
-			top: 19px;
-			margin-left: 81px;
-			transform: scale(.51);
+			top: 18px;
+			margin-left: 161px;
 		}
 
 		&--b7{
 			top: 14px;
-			margin-left: 50px;
-			transform: scale(.51);
+			margin-left: 140px;
 		}
 
 		&--b8{
 			top: 5px;
-			margin-left: 66px;
-			transform: scale(.51);
+			margin-left: 86px;
 		}
 
 		&--b9{
 			top: 31px;
 			margin-left: 5px;
-			transform: scale(.51);
 		}
 
 		&--b10{
 			top: 40px;
 			margin-left: -45px;
-			transform: scale(.51);
 		}
 
 		&--b11{
 			top: 40px;
 			margin-left: -105px;
-			transform: scale(.51);
 		}
 
 		&--b12{
 			top: 40px;
 			margin-left: -175px;
-			transform: scale(.51);
 		}
 
 		&--b13{
 			top: 40px;
 			margin-left: -305px;
-			transform: scale(.51);
 		}
 
 		&--b14{
 			top: 40px;
 			margin-left: -405px;
-			transform: scale(.51);
 		}
 
 		&--b15{
 			top: 40px;
 			margin-left: -505px;
-			transform: scale(.51);
 		}
 
 		&--b16{
 			top: 40px;
 			margin-left: -655px;
-			transform: scale(.51);
 		}
 
 		&--b17{
 			top: 40px;
 			margin-left: -855px;
-			transform: scale(.51);
 		}
 
 		&--b18{
 			top: 40px;
 			margin-left: -955px;
-			transform: scale(.51);
 		}
 
 		&--b19{
 			top: 40px;
 			margin-left: -1055px;
-			transform: scale(.51);
 		}
 
 		&--b23{
 			top: 250px;
-			margin-left: -1055px;
+			margin-left: -1100px;
 		}
 
 		&--b24{
 			top: 250px;
-			margin-left: -855px;
+			margin-left: -950px;
 		}
 
 		&--b25{
 			top: 250px;
-			margin-left: -655px;
+			margin-left: -800px;
 		}
 
 		&--b26{
 			top: 250px;
-			margin-left: -500px;
+			margin-left: -700px;
 		}
 
 		&--b27{
-			top: 250px;
-			margin-left: -300px;
+			top: 240px;
+			margin-left: -500px;
 		}
 
 		&--b28{
 			top: 250px;
-			margin-left: -100px;
+			margin-left: -350px;
 		}
 
 		&--b29{
 			top: 250px;
-			margin-left: 100px;
+			margin-left: -150px;
 		}
 
 		&--b30{
 			top: 250px;
-			margin-left: 350px;
+			margin-left: 50px;
 		}
 
 		&--b31{
 			top: 250px;
-			margin-left: 500px;
+			margin-left: 150px;
 		}
 
 		&--b32{
-			top: 250px;
-			margin-left: 700px;
+			top: 240px;
+			margin-left: 350px;
 		}
 
 		&--b33{
 			top: 250px;
+			margin-left: 500px;
+		}
+
+		&--b34{
+			top: 250px;
+			margin-left: 700px;
+		}
+
+		&--b35{
+			top: 250px;
 			margin-left: 900px;
 		}
+
 	}
 }
 

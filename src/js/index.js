@@ -21,7 +21,7 @@ var wave;
 
 var waveAnimationEnabled = false;
 
-var height = '900px';
+var height = '560px';
 
 
 function run(callback){
@@ -31,7 +31,7 @@ function run(callback){
 			boyRun[i-1] && boyRun[i-1].classList.remove('forest__item--visible');
 			boyRun[i] && boyRun[i].classList.add('forest__item--visible');
 
-			if (i === 5){
+			if (i === 6){
 				table.classList.add('forest__table--visible');
 			}
 
@@ -46,7 +46,7 @@ function run(callback){
 			
 			setTimeout(function(){
 				run(++i);
-			}, 100);
+			}, 150);
 		}
 	}				
 	run(0);
@@ -78,6 +78,10 @@ function createTimeline(){
 
 	timeLine.set(bannerStart, {
 		opacity: 1,
+		onComplete: function(){
+			table.classList.remove('forest__table--visible');
+			waveAnimationEnabled = false;
+		}
 	})
 	.fromTo(bannerText1, 1.0,{
 		top: '-130px',
@@ -112,18 +116,14 @@ function createTimeline(){
 		display: 'none',	
 	})
 	.set(fullscreen, {
-		display: 'block',	
+		display: 'block',
+		opacity: 1,	
 		onComplete: function(){
 			timeLine.pause();
 			run(function(){
 				timeLine.resume();
 			});
 		}
-	})
-	.to(repeat, .3, {
-		opacity: 1,
-		visibility: 'visible',
-		//ease: Bounce.easeOut,
 	})
 	.set(bannerBoy, {
 		display: 'none'
@@ -135,6 +135,11 @@ function createTimeline(){
 		opacity: 0,
 		scale: 0,
 		ease: Back.easeInOut,
+	}, 'final')
+	.to(repeat, .3, {
+		opacity: 1,
+		visibility: 'visible',
+		//ease: Bounce.easeOut,
 	}, 'final')
 	.to(bannerStart, .5, {
 		opacity: 0,
@@ -194,10 +199,20 @@ function setStyle(el, styles){
 
 function createWave(){
 	var parentDoc = window.parent ? window.parent.document : document;
+	var url;
+
 	wave = parentDoc.createElement('div');
 
+	if (process.env.NODE_ENV !== 'production'){
+		url = 'assets/boy/mahal.png';
+	}else{
+		url = 'https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970/boy/mahal.png';
+	}
+
+	console.log(url);
+
 	setStyle(wave, {
-		background: 'url(assets/boy/mahal.png) 0 0 no-repeat',
+		background: 'url(' + url + ') 0 0 no-repeat',
 		width: '177px',
 			height: '279px',
 			position: 'fixed',
@@ -233,7 +248,8 @@ function iframePosition(){
 		left: 0,
 		right: 0,
 		width: '100%',
-		zIndex: 10000000000
+		oveflow: 'hidden',
+		zIndex: 10000000000,
 	});
 
 	setStyle(frameElement, {
