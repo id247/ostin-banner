@@ -176,10 +176,12 @@ function createTimeline(){
 function fullSize(){
 	setStyle(parentFrameNode, {
 		height: maxHeight,
-		zIndex: bigZIndex
+		zIndex: bigZIndex,
+		pointerEvents: 'none',
 	});
 	setStyle(frameElement, {
-		height: maxHeight
+		height: maxHeight,		
+		pointerEvents: 'none',
 	});		
 }
 
@@ -187,9 +189,11 @@ function defaultSize(){
 	setStyle(parentFrameNode, {
 		height: defaultHeight,
 		zIndex: '',
+		pointerEvents: '',
 	});
 	setStyle(frameElement, {
-		height: defaultHeight
+		height: defaultHeight,
+		pointerEvents: '',
 	});			
 }
 
