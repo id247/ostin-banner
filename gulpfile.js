@@ -23,7 +23,7 @@ if (!CDN){
 // STYLES
 gulp.task('sass', function () {
 
-	return gulp.src('src/sass/style.scss')
+	return gulp.src(['src/sass/style.scss', 'src/sass/fullscreen.scss'])
 		.pipe($.if(devMode !== 'production', $.sourcemaps.init())) 
 		.pipe($.sass({outputStyle: 'expanded'})) 
 		.on('error', $.notify.onError())
