@@ -17,11 +17,22 @@ body{
 	overflow: hidden;
 	position: relative;
 
+	&--branding{
+		//width: 1200px;
+		//height: 800px;
+		border: 0;
+	}
+
 	&__boy{
 		position: absolute;
 		top: 230px;
 		right: -130px;
 		transform-origin: 0 0;
+
+		&--branding{
+		right: 0px;
+			transform-origin: 186px 0%;
+		}
 	}
 
 	&__href{
@@ -151,5 +162,11 @@ body{
 	right: 0;
 	margin: auto;
 	z-index: 100;
+
+	&--branding{
+		bottom: 0;
+		width: auto;
+		height: auto;
+	}
 }
 

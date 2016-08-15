@@ -3,12 +3,17 @@ var webpack = require('webpack');
 
 module.exports = {
 	devtool: '#inline-source-map',
-	entry: [
-		'./src/js'
-	],
+	entry: {
+		'b-970':[
+			'./src/js/b-970'
+		],
+		'branding':[
+			'./src/js/branding'
+		],
+	},
 	output: {
 		path: path.join(__dirname, 'dev/assets/js'),
-		filename: 'index.js',
+		filename: '[name].js',
 	},
 	plugins: [
 	],

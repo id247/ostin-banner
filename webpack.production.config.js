@@ -5,10 +5,19 @@ var webpack = require('webpack');
 
 module.exports = {
 	cache: true,
-	entry: ['babel-polyfill', './src/js'],
+	entry: {
+		'970':[
+			'babel-polyfill',
+			'./src/js/970'
+		],
+		'branding':[
+			'babel-polyfill',
+			'./src/js/branding'
+		],
+	},
 	output: {
 		path: path.join(__dirname, '/production/assets/js'),
-		filename: 'index.js',
+		filename: '[name].js',
 	},
 
 	resolve: {
