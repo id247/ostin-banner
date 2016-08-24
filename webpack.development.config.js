@@ -10,6 +10,9 @@ module.exports = {
 		'branding':[
 			'./src/js/branding'
 		],
+		'branding-2':[
+			'./src/js/branding-2'
+		],
 	},
 	output: {
 		path: path.join(__dirname, 'dev/assets/js'),

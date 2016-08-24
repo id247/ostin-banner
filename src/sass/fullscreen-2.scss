@@ -1,0 +1,233 @@
+
+/* ==========================================================================
+ * mahal
+ * ========================================================================== */
+
+._ostin-brand2-mahal{
+	background: url(https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970/boy/mahal.png) 50% 0 no-repeat;
+	width: 177px;
+	height: 279px;
+	position: fixed;
+	top: 30px;
+	right: -250px;
+	transform: rotate(-75deg);
+	pointer-events: none;
+	z-index: 1111111111;
+}
+
+/* ==========================================================================
+ * fullscreen
+ * ========================================================================== */
+
+
+._ostin-brand2-fullscreen{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 1111111111;
+
+	&__forest{
+		position: relative;
+		z-index: 50;
+	}
+}
+
+/* ==========================================================================
+ * forest
+ * ========================================================================== */
+
+
+._ostin-brand2-forest{
+	height: 840px;
+	overflow: hidden;
+
+	&__table{
+		position: absolute;
+		left: 50%;
+		top: 360px;
+		margin-left: 550px;
+		display: none;
+
+		&--visible{
+			display: block;
+		}
+	}
+
+	&__item{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -2800px;
+		transform-origin: 50% 0%;
+		//opacity: .3;
+		display: none;
+
+		&--visible{
+			display: block;
+		}
+
+		&--b1{
+			top: 278px;
+			margin-left: 550px;
+		}
+
+		&--b2{
+			top: 254px;
+			margin-left: 550px;
+		}
+
+		&--b3{
+			top: 227px;
+			margin-left: 550px;
+		}
+
+		&--b4{
+			top: 221px;
+			margin-left: 550px;
+		}
+
+		&--b5{
+			top: 224px;
+			margin-left: 518px;
+		}
+
+		&--b6{
+			top: 217px;
+			margin-left: 463px;
+		}
+
+		&--b7{
+			top: 209px;
+			margin-left: 421px;
+		}
+
+		&--b8{
+			top: 191px;
+			margin-left: 350px;
+		}
+
+		&--b9{
+			top: 231px;
+			margin-left: 200px;
+		}
+
+		&--b10{
+			top: 240px;
+			margin-left: 100px;
+		}
+
+		&--b11{
+			top: 240px;
+			margin-left: -80px;
+		}
+
+		&--b12{
+			top: 240px;
+			margin-left: -220px;
+		}
+
+		&--b13{
+			top: 240px;
+			margin-left: -400px;
+		}
+
+		&--b14{
+			top: 240px;
+			margin-left: -500px;
+		}
+
+		&--b15{
+			top: 240px;
+			margin-left: -630px;
+		}
+
+		&--b16{
+			top: 240px;
+			margin-left: -800px;
+		}
+
+		&--b17{
+			top: 240px;
+			margin-left: -1000px;
+		}
+
+		&--b18{
+			top: 240px;
+			margin-left: -1200px;
+		}
+
+		&--b19{
+			top: 240px;
+			margin-left: -1400px;
+		}
+
+		&--b23{
+			top: 450px;
+			margin-left: -1200px;
+		}
+
+		&--b24{
+			top: 450px;
+			margin-left: -1000px;
+		}
+
+		&--b25{
+			top: 450px;
+			margin-left: -800px;
+		}
+
+		&--b26{
+			top: 450px;
+			margin-left: -700px;
+		}
+
+		&--b27{
+			top: 440px;
+			margin-left: -500px;
+		}
+
+		&--b28{
+			top: 450px;
+			margin-left: -350px;
+		}
+
+		&--b29{
+			top: 450px;
+			margin-left: -150px;
+		}
+
+		&--b30{
+			top: 450px;
+			margin-left: 50px;
+		}
+
+		&--b31{
+			top: 450px;
+			margin-left: 150px;
+		}
+
+		&--b32{
+			top: 440px;
+			margin-left: 350px;
+		}
+
+		&--b33{
+			top: 450px;
+			margin-left: 500px;
+		}
+
+		&--b34{
+			top: 450px;
+			margin-left: 700px;
+		}
+
+		&--b35{
+			top: 450px;
+			margin-left: 900px;
+		}
+
+	}
+}

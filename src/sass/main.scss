@@ -55,14 +55,23 @@ body{
 		position: absolute;
 		
 		&--1{
+			display: block;
+			width: 410px;
 			top: -120px;
-			left: 100px;
+			left: 0;
+			right: 0;
+			margin: auto;
 		}
 
 		&--2{
 			top: 30px;
 			left: 50px;
 			opacity: 0;
+			display: block;
+			width: 534px;
+			left: 0;
+			right: 0;
+			margin: auto;
 		}
 	}
 
@@ -83,6 +92,17 @@ body{
 		bottom: 0;
 		opacity: 0;
 	}
+}
+
+/* ==========================================================================
+ * boy-branding
+ * ========================================================================== */
+
+.boy-branding{
+	position: absolute;
+	top: 278px;
+	left: 50%;
+	margin: 0 0 0 550px;
 }
 
 /* ==========================================================================

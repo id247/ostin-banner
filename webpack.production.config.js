@@ -14,6 +14,9 @@ module.exports = {
 			'babel-polyfill',
 			'./src/js/branding'
 		],
+		'branding-2':[
+			'./src/js/branding-2'
+		],
 	},
 	output: {
 		path: path.join(__dirname, '/production/assets/js'),
