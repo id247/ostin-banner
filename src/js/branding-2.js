@@ -181,15 +181,21 @@ function bgPosition(){
 	const paddingTop = document.createElement('div');
 
 	setStyle(parentFrame, {
-		top: '0px',
-		left: '50%',
+		top: '0',
+		left: '0',
+		width: '100%',
 		height: '900px',
-		marginLeft: '-960px',
 		position: 'absolute',
+		overflow: 'hidden',
 	});
 
 	setStyle(theFrame, {
-		height: '900px'
+		top: '0px',
+		left: '50%',
+		width: '1920px',
+		height: '900px',
+		marginLeft: '-960px',
+		position: 'absolute',
 	});
 
 	setStyle(paddingTop, {
