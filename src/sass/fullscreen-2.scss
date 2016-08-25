@@ -47,13 +47,17 @@
 	&__table{
 		position: absolute;
 		left: 50%;
-		top: 360px;
-		margin-left: 550px;
+		top: 190px;
+		margin-left: 410px;
 		display: none;
 
 		&--visible{
 			display: block;
 		}
+	}
+
+	.v{
+		display: block!important;
 	}
 
 	&__item{
@@ -70,38 +74,38 @@
 		}
 
 		&--b1{
-			top: 278px;
-			margin-left: 550px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b2{
-			top: 254px;
-			margin-left: 550px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b3{
-			top: 227px;
-			margin-left: 550px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b4{
-			top: 221px;
-			margin-left: 550px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b5{
-			top: 224px;
-			margin-left: 518px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b6{
-			top: 217px;
-			margin-left: 463px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b7{
-			top: 209px;
-			margin-left: 421px;
+			top: 190px;
+			margin-left: 410px;
 		}
 
 		&--b8{

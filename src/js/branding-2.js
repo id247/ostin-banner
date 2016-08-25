@@ -30,7 +30,7 @@ function run(callback){
 			boyRun[i-1] && boyRun[i-1].classList.remove(prefix + '-forest__item--visible');
 			boyRun[i] && boyRun[i].classList.add(prefix + '-forest__item--visible');
 
-			if (i === 6){
+			if (i === 7){
 				table.classList.add(prefix + '-forest__table--visible');
 			}
 
@@ -83,7 +83,7 @@ function createTimeline(){
 	},{	
 		top: '45px',
 		//ease: Power2.easeOut,
-	})
+	}, '1.4')
 	.to(bannerText1, 1.0, {
 		opacity: 0,
 		scale: 0,
@@ -172,6 +172,7 @@ function bgPosition(){
 	}
 
 	const parentFrame = parentDoc.getElementById('AdFox_banner_' + rnd);
+	const theFrame = parentDoc.getElementById('adfoxHtml5_iframe_' + rnd);
 
 	if (!parentFrame){
 		return;
@@ -182,8 +183,13 @@ function bgPosition(){
 	setStyle(parentFrame, {
 		top: '0px',
 		left: '50%',
+		height: '900px',
 		marginLeft: '-960px',
 		position: 'absolute',
+	});
+
+	setStyle(theFrame, {
+		height: '900px'
 	});
 
 	setStyle(paddingTop, {
