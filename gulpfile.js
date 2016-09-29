@@ -212,7 +212,7 @@ gulp.task('build', gulp.series('webpack', 'assets', 'sass', 'html', 'vers'));
 //production
 
 // npm run prod - build whole project to deploy in 'production' folder
-gulp.task('prod', gulp.series('build', 'modifyCssUrls'));
+gulp.task('prod', gulp.series( 'clean', 'build', 'modifyCssUrls'));
 
 // npm run prod-html - build only html in 'production' folder
 gulp.task('prod-html', gulp.series('html'));

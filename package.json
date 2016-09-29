@@ -2,7 +2,7 @@
   "name": "ostin-forest",
   "version": "1.0.0",
   "description": "",
-  "cdn": "https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970/",
+  "cdn": "https://ad.csdnevnik.ru/special/staging/adfox/ostin/forest/970-demoads/",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
